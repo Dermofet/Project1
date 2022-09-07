@@ -32,6 +32,10 @@ int ui::ListWidget::currentIndex()
 }
 void ui::ListWidget::mousePressEvent(QMouseEvent* event)
 {
+	if (curIndex != -1)
+	{
+		verLayout->itemAt(curIndex)->widget()->setPalette(QPalette(QColor(255, 255, 255), QColor(255, 255, 255)));
+	}
 	curIndex = -1;
 }
 void ui::ListWidget::deleteAll()
@@ -50,6 +54,11 @@ void ui::ListWidget::clear()
 }
 void ui::ListWidget::setCurIndex(ListItem* item)
 {
+	if (curIndex != -1) 
+	{
+		verLayout->itemAt(curIndex)->widget()->setPalette(QPalette(QColor(255, 255, 255), QColor(255, 255, 255)));
+	}
 	curIndex = verLayout->indexOf(item);
+	verLayout->itemAt(curIndex)->widget()->setPalette(QPalette(QColor(49, 120, 167), QColor(60, 229, 255)));
 	emit currentChanged(curIndex);
 }

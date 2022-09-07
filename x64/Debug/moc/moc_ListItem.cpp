@@ -96,7 +96,7 @@ void ui::ListItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
 }
 
 const QMetaObject ui::ListItem::staticMetaObject = { {
-    QMetaObject::SuperData::link<QFrame::staticMetaObject>(),
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
     qt_meta_stringdata_ui__ListItem.offsetsAndSize,
     qt_meta_data_ui__ListItem,
     qt_static_metacall,
@@ -121,12 +121,12 @@ void *ui::ListItem::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_ui__ListItem.stringdata0))
         return static_cast<void*>(this);
-    return QFrame::qt_metacast(_clname);
+    return QWidget::qt_metacast(_clname);
 }
 
 int ui::ListItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QFrame::qt_metacall(_c, _id, _a);
+    _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

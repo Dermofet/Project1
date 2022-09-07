@@ -1,5 +1,3 @@
-﻿  moc MainWindow.h
-  MainWindow.cpp
-  main.cpp
-  moc_MainWindow.cpp
+﻿  ListItem.cpp
+  ListWidget.cpp
   Project1.vcxproj -> C:\Users\pi-77\source\repos\QTProjects\Project1\x64\Debug\Project1.exe

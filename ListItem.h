@@ -3,7 +3,7 @@
 #include "ui_ListItem.h"
 
 namespace ui {
-	class ListItem : public QFrame
+	class ListItem : public QWidget
 	{
 		Q_OBJECT
 	private:

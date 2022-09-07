@@ -1,8 +1,10 @@
 #include "ListItem.h"
 
-ui::ListItem::ListItem(QWidget* parent) : QFrame(parent)
+ui::ListItem::ListItem(QWidget* parent) : QWidget(parent)
 {
 	m_ListItem.setupUi(this);
+	this->setAutoFillBackground(true);
+	this->setPalette(QPalette(QColor(255, 255, 255), QColor(255, 255, 255)));
 	connect(m_ListItem.deleteBtn, &QToolButton::clicked, this, &ListItem::sendSignal);
 	connect(m_ListItem.renameBtn, &QToolButton::clicked, this, &ListItem::sendSignal);
 }
@@ -31,5 +33,6 @@ void ui::ListItem::mousePressEvent(QMouseEvent* event)
 
 void ui::ListItem::sendSignal()
 {
+	qDebug() << "Tap!";
 	emit selected(this);
 }

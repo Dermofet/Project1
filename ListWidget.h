@@ -10,6 +10,7 @@ namespace ui {
 	private:
 		QVBoxLayout* verLayout;
 		int curIndex;
+		//QPalette* selectedPalette, * unselectedPalette;
 	public:
 		explicit ListWidget(QWidget* parent = nullptr);
 		~ListWidget() {}

@@ -11,10 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QToolButton>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -27,13 +27,11 @@ public:
     QToolButton *deleteBtn;
     QToolButton *renameBtn;
 
-    void setupUi(QFrame *ListItem_Form)
+    void setupUi(QWidget *ListItem_Form)
     {
         if (ListItem_Form->objectName().isEmpty())
             ListItem_Form->setObjectName(QString::fromUtf8("ListItem_Form"));
-        ListItem_Form->resize(229, 82);
-        ListItem_Form->setFrameShape(QFrame::Box);
-        ListItem_Form->setFrameShadow(QFrame::Sunken);
+        ListItem_Form->resize(217, 83);
         horizontalLayout_2 = new QHBoxLayout(ListItem_Form);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout = new QHBoxLayout();
@@ -62,9 +60,9 @@ public:
         QMetaObject::connectSlotsByName(ListItem_Form);
     } // setupUi
 
-    void retranslateUi(QFrame *ListItem_Form)
+    void retranslateUi(QWidget *ListItem_Form)
     {
-        ListItem_Form->setWindowTitle(QCoreApplication::translate("ListItem_Form", "Frame", nullptr));
+        ListItem_Form->setWindowTitle(QCoreApplication::translate("ListItem_Form", "Form", nullptr));
         label->setText(QCoreApplication::translate("ListItem_Form", "TextLabel", nullptr));
         deleteBtn->setText(QCoreApplication::translate("ListItem_Form", "Delete", nullptr));
         renameBtn->setText(QCoreApplication::translate("ListItem_Form", "Rename", nullptr));
